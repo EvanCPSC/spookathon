@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>ScareFeed Horror</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Creepster&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      background-color: rgb(174, 76, 6);
+      text-align: center;
+    }
+
+    h1,
+    h3 {
+      font-family: 'Creepster', system-ui;
+      color: rgb(108, 18, 192);
+      text-shadow: 5px 5px black;
+    }
+
+    h1 {
+      font-size: 100px;
+      margin-bottom: 0px;
+    }
+
+    h3 {
+      font-size: 60px;
+      margin-top: 0px;
+    }
+
+    button {
+      font-size: 25px;
+      padding: 10px;
+      border: 4px black solid;
+      background-color: purple;
+      color: white;
+      border-radius: 8px;
+      margin: 10px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>ScareFeed</h1>
+
+  <h3>Two-Sentence Horror Stories</h3>
+  <p id="story"></p>
+  <p id="secondPart"></p>
+  <button onclick="showRandomStory()">Tell Me a Story</button>
+  <button onclick="revealSecondPart()" id="revealButton" style="display: none;">Reveal the Second Part</button>
+
+  <script>
+    const stories = [
+      [
+        "All my life, my parents have told me not to open the basement door, but I got curious and disobeyed them\n",
+        "What is that glowing ball in the sky and why does it hurt my eyes?"
+      ],
+      [
+        "\"Now be careful, that line of rock salt is the only thing keeping them out,\" the man said, welcoming my group into his refuge.\n",
+        "\"Sea salt,\" I clarified, \"sea salt keeps us out.\""
+      ],
+      [
+        "I was born blind but was lucky enough to have a loving mother who took care of my every need.\n",
+        "Imagine the betrayal I felt when a stitch slipped and a ray of light hit my eye for the first time."
+      ],
+      [
+        "The principal of my sons school called me at work today to tell me my son pushed another kid while on on a school excursion.\n",
+        "I initially thought that this hardly warranted a phone call, until I remembered that my sons excursion was to the Grand Canyon..."
+      ],
+      [
+        "When the tsunamis hit, most people were evacuated.\n",
+        "Feeling the trickle of water rise to my chin, I let go of the prison bars in bitter resentment."
+      ],
+      [
+        "\"Battery at 1%\"\n",
+        "I looked at Earth one last time before my suit ran out of power"
+      ],
+      [
+        "It's been almost a decade since I last saw my mother.\n",
+        "And she still reminds me every day that if I misbehave again she'll take my hearing too."
+      ],
+      [
+        "They say we have a primal sense, that we can just feel when someone is watching us.\n",
+        "It's been a few weeks, and it's clear that you do not have that sense."
+      ],
+      [
+        "I used to hate the sound of crickets outside the lonely farmhouse.\n",
+        "Now every time they go silent I know that thing is passing by, and I pray for them to chirp again."
+      ],
+      [
+        "\"It seems you have discovered an entirely new type of termite\".\n",
+        "The doctor turned around with the x-rays; \"this also explains the 'aching' you've been feeling in your bones\"."
+      ],
+      [
+        "The last person on Earth sat alone in a room.\n",
+        "There was a knock on the door."
+      ]
+    ];
+
+    let currentStoryIndex = null;
+
+    function showRandomStory() {
+      currentStoryIndex = Math.floor(Math.random() * stories.length);
+      document.getElementById("story").textContent = stories[currentStoryIndex][0];
+      document.getElementById("secondPart").textContent = "";
+      document.getElementById("revealButton").style.display = "inline"; // Enable reveal button
+    }
+
+    function revealSecondPart() {
+        if (currentStoryIndex !== null) {
+          document.getElementById("secondPart").textContent = stories[currentStoryIndex][1];
+          document.getElementById("revealButton").style.display = "none"; // Disable reveal button after use
+        }
+      }
+  </script>
+
+</body>
+
+</html>
