@@ -53,6 +53,22 @@
 
   <h1>ScareFeed</h1>
 
+  <h1>Two-Sentence Horror Stories</h1>
+  <button onclick="showRandomStory()">Tell Me a Story</button>
+  <p id="story"></p>
+
+  <script>
+    const stories = [
+      "test",
+      "test"
+    ];
+
+    function showRandomStory() {
+      const randomIndex = Math.floor(Math.random() * stories.length);
+      document.getElementById("story").textContent = stories[randomIndex];
+    }
+  </script>
+
 </body>
 
 </html>
