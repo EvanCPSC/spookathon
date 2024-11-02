@@ -1,0 +1,59 @@
+body {
+    background: linear-gradient(to right, #2c2352, #000000);
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Creepster', system-ui;
+    color: rgb(189, 131, 14);
+    text-shadow: 5px 5px black;
+    font-size: 100px;
+    margin-bottom: 0px;
+}
+h3 {
+    font-family: 'Creepster', system-ui;
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px black;
+    font-size: 60px;
+    margin-top: 0px;
+}
+button {
+    font-size: 25px;
+    font-family: 'Creepster', system-ui;
+    padding: 10px;
+    border: 4px black solid;
+    background-color: purple;
+    color: white;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.fact {
+    font-size: xx-large;
+
+    color: black;
+}
+
+button {
+        
+        transition: transform .2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.title {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+div {
+    padding: 20px;
+    margin-bottom: 100px;
+}
+
+a:link, a:visited {
+    color: white;
+    text-decoration: none;
+}
