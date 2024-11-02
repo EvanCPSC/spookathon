@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <title>ScareFeed</title>
+        <style>
+            body {
+                background-color: rgb(174, 76, 6);
+                text-align: center;
+            }
+            h1, h3 {
+                font-family: 'Creepster', system-ui;
+                color: rgb(108, 18, 192);
+                text-shadow: 5px 5px black;
+            }
+            h1 {
+                font-size: 80px;
+            }
+            h3 {
+                font-size: 50px;
+            }
+            .quiz {
+                margin: auto;
+                width: 500px;
+                text-align: left;
+            }
+            label {
+                font-size: 20px;
+                color: white;
+            }
+            input {
+                margin-bottom: 15px;
+            }
+            #sub {
+                font-size: 25px;
+                padding: 10px;
+                border: 4px black solid;
+                background-color: purple;
+                color: white;
+                border-radius: 8px;
+                margin: 10px;
+            }
+            img {
+                max-height: 300px;
+            }
+            button {
+                font-size: 20px;
+                padding: 10px;
+                border: 4px black solid;
+                background-color: purple;
+                color: white;
+                border-radius: 8px;
+            }
+            a:link, a:visited {
+                color: white;
+                text-decoration: none;
+            }
+        </style>
+        <script>
+            const countChecks = (evt) => {
+                const checks = document.querySelectorAll(".checks:checked");
+                const checkedCount = checks.length;
+                var img = document.getElementById("cr");
+
+                if (checkedCount < 10) {
+                    document.getElementById("creature").innerHTML = "Spider";
+                    img.src = "spider.png";
+                } else if (checkedCount < 20) {
+                    document.getElementById("creature").innerHTML = "Zombie";
+                    img.src = "zombie.png";
+                } else if (checkedCount < 30) {
+                    document.getElementById("creature").innerHTML = "Vampire";
+                    img.src = "vampire.png";
+                } else if (checkedCount < 40) {
+                    document.getElementById("creature").innerHTML = "Ghost";
+                    img.src = "ghost.png";
+                } else {
+                    document.getElementById("creature").innerHTML = "Werewolf";
+                    img.src = "werewolf.png";
+                }
+
+                }
+
+        </script>
+    </head>
+
+    <body>
+        <button><a href="index.html">Home</a></button>
+        <h1>Which Creature are you?</h1>
+        <div class="quiz">
+            <input class="checks" type="checkbox" id="1" name="1" value="1">
+            <label for="1">Likes candy</label><br>
+            <input class="checks" type="checkbox" id="2" name="2" value="1">
+            <label for="2">Wore a costume last Halloween</label><br>
+            <input class="checks" type="checkbox" id="3" name="3" value="1">
+            <label for="3">Likes to play video games</label><br>
+            <input class="checks" type="checkbox" id="4" name="4" value="1">
+            <label for="4">Likes to listen to music</label><br>
+            <input class="checks" type="checkbox" id="5" name="5" value="1">
+            <label for="5">Likes driving fast</label><br>
+            <input class="checks" type="checkbox" id="6" name="6" value="1">
+            <label for="6">Likes eating food</label><br>
+            <input class="checks" type="checkbox" id="7" name="7" value="1">
+            <label for="7">Likes to draw</label><br>
+            <input class="checks" type="checkbox" id="8" name="9" value="1">
+            <label for="9">Likes staying up late at night</label><br>
+            <input class="checks" type="checkbox" id="10" name="10" value="1">
+            <label for="10">Likes to get revenge</label><br>
+            <input class="checks" type="checkbox" id="11" name="11" value="1">
+            <label for="11">Likes dissecting insects and animals</label><br>
+            <input class="checks" type="checkbox" id="12" name="12" value="1">
+            <label for="12">Likes sharp objects</label><br>
+            <input class="checks" type="checkbox" id="13" name="13" value="1">
+            <label for="13">Likes to kill insects</label><br>
+            <input class="checks" type="checkbox" id="14" name="14" value="1">
+            <label for="14">Been to a Halloween party</label><br>
+            <input class="checks" type="checkbox" id="15" name="15" value="1">
+            <label for="15">Got drunk on Halloween</label><br>
+            <input class="checks" type="checkbox" id="16" name="16" value="1">
+            <label for="16">Got high on Halloween</label><br>
+            <input class="checks" type="checkbox" id="17" name="17" value="1">
+            <label for="17">Given out expired candy</label><br>
+            <input class="checks" type="checkbox" id="18" name="18" value="1">
+            <label for="18">Eaten expired candy</label><br>
+            <input class="checks" type="checkbox" id="19" name="19" value="1">
+            <label for="19">Had something weird in your candy</label><br>
+            <input class="checks" type="checkbox" id="20" name="20" value="1">
+            <label for="20">Given out candy</label><br>
+            <input class="checks" type="checkbox" id="21" name="21" value="1">
+            <label for="21">9 + 10 = 21</label><br>
+            <input class="checks" type="checkbox" id="22" name="22" value="1">
+            <label for="22">Listens to Thriller regularly</label><br>
+            <input class="checks" type="checkbox" id="23" name="23" value="1">
+            <label for="23">Can't wait for Christmas season</label><br>
+            <input class="checks" type="checkbox" id="24" name="24" value="1">
+            <label for="24">Wants to be a zombie</label><br>
+            <input class="checks" type="checkbox" id="25" name="25" value="1">
+            <label for="25">Wants to be a werewolf</label><br>
+            <input class="checks" type="checkbox" id="26" name="26" value="1">
+            <label for="26">Is a furry</label><br>
+            <input class="checks" type="checkbox" id="27" name="27" value="1">
+            <label for="27">Wants to be a spider</label><br>
+            <input class="checks" type="checkbox" id="28" name="28" value="1">
+            <label for="28">Wants to be a vampire</label><br>
+            <input class="checks" type="checkbox" id="29" name="29" value="1">
+            <label for="29">Wants to be Frankenstein's Monster</label><br>
+            <input class="checks" type="checkbox" id="30" name="30" value="1">
+            <label for="30">Wants to be Frankenstein</label><br>
+            <input class="checks" type="checkbox" id="31" name="31" value="1">
+            <label for="31">Wants to be a ghost</label><br>
+            <input class="checks" type="checkbox" id="32" name="32" value="1">
+            <label for="32">Wants to be dead</label><br>
+            <input class="checks" type="checkbox" id="33" name="33" value="1">
+            <label for="33">Wants this quiz to end already</label><br>
+            <input class="checks" type="checkbox" id="34" name="34" value="1">
+            <label for="34">Excited for Halloween</label><br>
+            <input class="checks" type="checkbox" id="35" name="35" value="1">
+            <label for="35">Came to this site for the hackathon</label><br>
+            <input class="checks" type="checkbox" id="36" name="36" value="1">
+            <label for="36">Excited to hear the winners of the hackathon</label><br>
+            <input class="checks" type="checkbox" id="37" name="37" value="1">
+            <label for="37">Likes pumpkins</label><br>
+            <input class="checks" type="checkbox" id="38" name="38" value="1">
+            <label for="38">Likes pumpkin pie</label><br>
+            <input class="checks" type="checkbox" id="39" name="39" value="1">
+            <label for="39">Likes Canes</label><br>
+            <input class="checks" type="checkbox" id="40" name="40" value="1">
+            <label for="40">Likes candy corn</label><br>
+            <input class="checks" type="checkbox" id="41" name="41" value="1">
+            <label for="41">Likes chocolate</label><br>
+            <input class="checks" type="checkbox" id="42" name="42" value="1">
+            <label for="42">Prefers left twix</label><br>
+            <input class="checks" type="checkbox" id="43" name="43" value="1">
+            <label for="43">Prefers right twix</label><br>
+            <input class="checks" type="checkbox" id="44" name="44" value="1">
+            <label for="44">Eats kit-kats the wrong way</label><br>
+            <input class="checks" type="checkbox" id="45" name="45" value="1">
+            <label for="45">Likes sour candy</label><br>
+            <input class="checks" type="checkbox" id="46" name="46" value="1">
+            <label for="46">Throws out the raisins</label><br>
+            <input class="checks" type="checkbox" id="47" name="47" value="1">
+            <label for="47">Likes raisins</label><br>
+            <input class="checks" type="checkbox" id="48" name="48" value="1">
+            <label for="48">Has jumpscared someone</label><br>
+            <input class="checks" type="checkbox" id="49" name="49" value="1">
+            <label for="49">Has been jumpscared by someone</label><br>
+            <input class="checks" type="checkbox" id="50" name="50" value="1">
+            <label for="50">Loves Joel</label><br>
+            <br>
+            <input id="sub" type="submit" onclick="countChecks()">
+        </div>
+        <div class="result">
+            <h3>You are a:</h3>
+            <h3 id="creature"></h3>
+            <img id="cr">
+        </div>
+    </body>
+</html>
