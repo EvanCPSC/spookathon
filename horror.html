@@ -53,19 +53,61 @@
 
   <h1>ScareFeed</h1>
 
-  <h1>Two-Sentence Horror Stories</h1>
+  <h3>Two-Sentence Horror Stories</h3>
   <button onclick="showRandomStory()">Tell Me a Story</button>
   <p id="story"></p>
 
   <script>
     const stories = [
-      "test",
-      "test"
+      [
+        "All my life, my parents have told me not to open the basement door, but I got curious and disobeyed them",
+        "What is that glowing ball in the sky and why does it hurt my eyes?"
+      ],
+      [
+        "\"Now be careful, that line of rock salt is the only thing keeping them out,\" the man said, welcoming my group into his refuge.",
+        "\"Sea salt,\" I clarified, \"sea salt keeps us out.\""
+      ],
+      [
+        "I was born blind but was lucky enough to have a loving mother who took care of my every need.",
+        "Imagine the betrayal I felt when a stitch slipped and a ray of light hit my eye for the first time."
+      ],
+      [
+        "The principal of my sons school called me at work today to tell me my son pushed another kid while on on a school excursion.",
+        "I initially thought that this hardly warranted a phone call, until I remembered that my sons excursion was to the Grand Canyon..."
+      ],
+      [
+        "When the tsunamis hit, most people were evacuated.",
+        "Feeling the trickle of water rise to my chin, I let go of the prison bars in bitter resentment."
+      ],
+      [
+        "\"Battery at 1 %\"",
+        "I looked at Earth one last time before my suit ran out of power"
+      ],
+      [
+        "It's been almost a decade since I last saw my mother.",
+        "And she still reminds me every day that if I misbehave again she'll take my hearing too."
+      ],
+      [
+        "They say we have a primal sense, that we can just feel when someone is watching us.",
+        "It's been a few weeks, and it's clear that you do not have that sense."
+      ],
+      [
+        "I used to hate the sound of crickets outside the lonely farmhouse.",
+        "Now every time they go silent I know that thing is passing by, and I pray for them to chirp again."
+      ],
+      [
+        "\"It seems you have discovered an entirely new type of termite\".",
+        "The doctor turned around with the x-rays; \"this also explains the 'aching' you've been feeling in your bones\"."
+      ],
+      [
+        "The last person on Earth sat alone in a room.",
+        "There was a knock on the door."
+      ]
     ];
 
     function showRandomStory() {
       const randomIndex = Math.floor(Math.random() * stories.length);
-      document.getElementById("story").textContent = stories[randomIndex];
+      document.getElementById("story").textContent = stories[randomIndex][0];
     }
   </script>
 
